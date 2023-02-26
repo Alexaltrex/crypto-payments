@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/crypto-payments/static/css/main.07b378a8.css",
-    "main.js": "/crypto-payments/static/js/main.303b9309.js",
+    "main.css": "/crypto-payments/static/css/main.00a7367f.css",
+    "main.js": "/crypto-payments/static/js/main.91a77193.js",
     "static/js/787.c4e7f8f9.chunk.js": "/crypto-payments/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/crypto-payments/index.html",
-    "main.07b378a8.css.map": "/crypto-payments/static/css/main.07b378a8.css.map",
-    "main.303b9309.js.map": "/crypto-payments/static/js/main.303b9309.js.map",
+    "main.00a7367f.css.map": "/crypto-payments/static/css/main.00a7367f.css.map",
+    "main.91a77193.js.map": "/crypto-payments/static/js/main.91a77193.js.map",
     "787.c4e7f8f9.chunk.js.map": "/crypto-payments/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07b378a8.css",
-    "static/js/main.303b9309.js"
+    "static/css/main.00a7367f.css",
+    "static/js/main.91a77193.js"
   ]
 }
