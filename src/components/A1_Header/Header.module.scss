@@ -1,0 +1,168 @@
+@import "../../assets/style/app";
+
+.header {
+  height: 60px;
+  background: royalblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  .logoWrapper {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-left: 8px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #FFF;
+    }
+  }
+
+  .connectButtonWrapper {
+    position: relative;
+    height: 40px;
+
+    .connectButton {
+      @include button;
+      display: flex;
+      align-items: center;
+      height: 40px;
+      border-radius: 999px;
+      background: #FFF;
+      padding: 0 25px;
+      box-sizing: border-box;
+      transition: 0.3s background-color;
+
+      &_connected {
+        padding: 0 12px 0 20px;
+      }
+
+
+      &:hover {
+        background: beige;
+      }
+
+      &:disabled {
+        background: lightgray;
+        cursor: auto;
+
+        &:hover {
+          background: lightgray;
+        }
+      }
+
+      .metamask {
+        width: 24px;
+        height: 24px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .account {
+        margin-left: 8px;
+        display: flex;
+        font-size: 16px;
+
+        p:first-child {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 78px;
+        }
+      }
+
+      .arrow {
+        margin-left: 8px;
+        width: 25px;
+        height: 25px;
+
+        svg {
+          transition: 0.3s;
+        }
+
+        &_showAccountPopup svg {
+          transform: rotate(-180deg);
+        }
+      }
+
+      .btnLabel {
+        font-weight: bold;
+      }
+    }
+
+    .accountPopup {
+      position: absolute;
+      transform: translateY(100%);
+      right: 0;
+      bottom: -4px;
+      padding: 12px 16px;
+      background: #FFF;
+      border: 3px solid grey;
+      border-radius: 20px;
+      width: 350px;
+      box-sizing: border-box;
+
+      .top, .accountBlock, .balanceBlock  {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .top {
+
+        .topLabel {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .disconnectBtn {
+          border-radius: 999px;
+          text-transform: none;
+          padding: 3px 12px;
+        }
+      }
+
+      .accountBlock {
+        margin-top: 8px;
+
+        .bottomLeft {
+          display: flex;
+          align-items: center;
+        }
+
+        .account {
+          margin-left: 8px;
+          display: flex;
+          font-size: 16px;
+
+          p:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 78px;
+          }
+        }
+
+        .copiedIconWrapper {
+          @include centerRow;
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .balanceBlock {
+        margin-top: 8px;
+
+      }
+
+    }
+  }
+
+
+
+}

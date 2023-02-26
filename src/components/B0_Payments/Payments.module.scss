@@ -1,0 +1,153 @@
+@import "../../assets/style/app";
+
+.payments {
+  min-height: calc(100vh - 60px);
+  padding: 16px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 16px;
+
+  .contract, .events {
+    border: 1px solid royalblue;
+    box-sizing: border-box;
+    border-radius: 16px;
+    padding: 16px;
+
+    .blockTitle {
+      background: #d32f2f;
+      color: #FFF;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  .contract {
+
+    .addressBlock {
+      margin-top: 24px;
+
+      .label {
+        background: royalblue;
+        color: #FFF;
+        padding: 4px 8px;
+        border-radius: 4px 4px 0 0;
+      }
+
+      .address {
+        color: royalblue;
+        padding: 4px 8px;
+        box-sizing: border-box;
+        border-radius: 0 0 4px 4px;
+        border: 2px solid royalblue;
+      }
+    }
+
+    .payForm {
+      margin-top: 24px;
+
+      .btn {
+        margin-top: 8px;
+        display: block;
+      }
+    }
+
+    .withdrawBtn {
+      margin-top: 24px;
+      display: block;
+    }
+
+
+  }
+
+  .events {
+
+    .table {
+      margin-top: 24px;
+
+      .tableLibel {
+        padding: 4px 8px;
+        background: #2e7d32;
+        color: #FFF;
+        box-sizing: border-box;
+        border-radius: 4px;
+      }
+
+      .header {
+        margin-top: 4px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-column-gap: 4px;
+
+        p {
+          padding: 4px 8px;
+          background: royalblue;
+          color: #FFF;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+      }
+
+      .header2 {
+        margin-top: 4px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4px;
+
+        p {
+          padding: 4px 8px;
+          background: royalblue;
+          color: #FFF;
+          box-sizing: border-box;
+          border-radius: 4px;
+        }
+      }
+
+      .rows {
+        margin-top: 8px;
+
+        .row {
+          display: grid;
+          grid-template-columns: 2fr 1fr 1fr;
+          grid-column-gap: 4px;
+
+          &:not(:first-child) {
+            margin-top: 4px;
+          }
+
+          p {
+            padding: 4px 8px;
+            background: #333;
+            color: #FFF;
+            box-sizing: border-box;
+            border-radius: 4px;
+          }
+        }
+      }
+
+      .rows2 {
+        margin-top: 8px;
+
+        .row2 {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-column-gap: 4px;
+
+          &:not(:first-child) {
+            margin-top: 4px;
+          }
+
+          p {
+            padding: 4px 8px;
+            background: #333;
+            color: #FFF;
+            box-sizing: border-box;
+            border-radius: 4px;
+          }
+        }
+      }
+
+
+    }
+  }
+}
