@@ -27,6 +27,16 @@
     .addressBlock {
       margin-top: 24px;
 
+      .link {
+        display: block;
+        background: royalblue;
+        color: #FFF;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 20px;
+        text-decoration: underline;
+      }
+
       .label {
         background: royalblue;
         color: #FFF;
@@ -48,13 +58,45 @@
 
       .btn {
         margin-top: 8px;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper {
+          position: relative;
+
+          .preloader {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            transform: translate(100%, -50%);
+            top: 50%;
+            right: -4px;
+          }
+
+        }
       }
     }
 
     .withdrawBtn {
       margin-top: 24px;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .wrapper {
+        position: relative;
+
+        .preloader {
+          width: 25px;
+          height: 25px;
+          position: absolute;
+          transform: translate(100%, -50%);
+          top: 50%;
+          right: -4px;
+        }
+
+      }
     }
 
 

@@ -4,7 +4,7 @@ import {useStore} from "../../store/useStore";
 import {observer} from "mobx-react-lite";
 import {BigNumber, ethers} from "ethers";
 import {FormikHelpers, useFormik} from "formik";
-import {TextField} from "@mui/material";
+import {Link, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import {
@@ -16,6 +16,7 @@ import {
 } from "../../types/types";
 import {payLogArgsHandler, withdrawalLogArgsHandler} from "../../helpers/helpers";
 import {chainId, getContract, getContractAddress, getProvider} from "../../helpers/ethers.helper";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export const Payments = observer(() => {
     const {
@@ -244,6 +245,17 @@ export const Payments = observer(() => {
                 </div>
 
                 <div className={style.addressBlock}>
+                    {/*<Typography className={style.label}>Etherscan</Typography>*/}
+                    <Link className={style.link}
+                          href="https://goerli.etherscan.io/address/0xB5b209B4DE252716240ef40D9658265dae8d3453#code"
+                          target="_blank"
+                    >
+                        Link to Etherscan
+                    </Link>
+
+                </div>
+
+                <div className={style.addressBlock}>
                     <Typography className={style.label}>Owner address</Typography>
                     <Typography className={style.address}>{ownerAddress}</Typography>
                 </div>
@@ -273,7 +285,16 @@ export const Payments = observer(() => {
                             className={style.btn}
                             disabled={!window.ethereum || !currentAccountAddress || payLoading}
                     >
-                        Pay to contract
+                        <div className={style.wrapper}>
+                            <p>Pay to contract</p>
+                            {
+                                payLoading &&
+                                <div className={style.preloader}>
+                                    <CircularProgress color="secondary" size={25}/>
+                                </div>
+                            }
+
+                        </div>
                     </Button>
                 </form>
 
@@ -289,7 +310,16 @@ export const Payments = observer(() => {
                         }
 
                 >
-                    withdraw (only for owner)
+                    <div className={style.wrapper}>
+                        <p>withdraw (only for owner)</p>
+                        {
+                            withdrawLoading &&
+                            <div className={style.preloader}>
+                                <CircularProgress color="secondary" size={25}/>
+                            </div>
+                        }
+
+                    </div>
                 </Button>
 
                 <Button variant="contained"
