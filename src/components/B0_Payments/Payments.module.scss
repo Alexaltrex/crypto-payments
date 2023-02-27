@@ -27,16 +27,6 @@
     .addressBlock {
       margin-top: 24px;
 
-      .link {
-        display: block;
-        background: royalblue;
-        color: #FFF;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 20px;
-        text-decoration: underline;
-      }
-
       .label {
         background: royalblue;
         color: #FFF;
@@ -50,6 +40,31 @@
         box-sizing: border-box;
         border-radius: 0 0 4px 4px;
         border: 2px solid royalblue;
+      }
+    }
+
+    .etherscanBlock {
+      margin-top: 24px;
+      background: #ed6c02;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      svg {
+        align-self: center;
+        width: 150px;
+        height: auto;
+        flex-grow: 0;
+      }
+
+      .link {
+        flex-shrink: 0;
+        display: block;
+        color: #FFF;
+        font-size: 20px;
+        text-decoration: none;
       }
     }
 

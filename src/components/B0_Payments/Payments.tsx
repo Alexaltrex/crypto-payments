@@ -17,6 +17,7 @@ import {
 import {payLogArgsHandler, withdrawalLogArgsHandler} from "../../helpers/helpers";
 import {chainId, getContract, getContractAddress, getProvider} from "../../helpers/ethers.helper";
 import CircularProgress from "@mui/material/CircularProgress";
+import {svgIcons} from "../../assets/svgIcons";
 
 export const Payments = observer(() => {
     const {
@@ -244,8 +245,8 @@ export const Payments = observer(() => {
                     <Typography className={style.address}>{contractBalance}</Typography>
                 </div>
 
-                <div className={style.addressBlock}>
-                    {/*<Typography className={style.label}>Etherscan</Typography>*/}
+                <div className={style.etherscanBlock}>
+                    {svgIcons.etherscan}
                     <Link className={style.link}
                           href="https://goerli.etherscan.io/address/0xB5b209B4DE252716240ef40D9658265dae8d3453#code"
                           target="_blank"
