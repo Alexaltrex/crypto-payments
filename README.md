@@ -3,7 +3,7 @@ React frontend application interacting with smart contract in Ethereum Blockchai
 Smart contract allows anyone to pay to it and withdraw from contract to owner account only for the owner. 
 Payment to contract generate an event "PaymentEvent", withdraw from contract generate an event "Withdrawal".
 
-<img src="https://user-images.githubusercontent.com/56224288/221502949-023e2c59-f9b7-4d4e-adea-d51db29c3d6b.jpg" height="250">
+<img src="https://user-images.githubusercontent.com/56224288/221502949-023e2c59-f9b7-4d4e-adea-d51db29c3d6b.jpg" height="400">
 
 * Demo: https://alexaltrex.github.io/crypto-payments
 * Front-end: React
